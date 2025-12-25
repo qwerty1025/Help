@@ -10372,7 +10372,7 @@ ${textResponses.join('\n\n')}`;
             // 如果上述來源都沒有設定，才會使用這裡的值
             // ============================================================================
             firebaseConfig = {
-                apiKey: "AIzaSyDAsSn6nxAaBChbquJqf1w_fTpRItUKvZ8",
+                 apiKey: "AIzaSyDAsSn6nxAaBChbquJqf1w_fTpRItUKvZ8",
   authDomain: "goat-st01.firebaseapp.com",
   projectId: "goat-st01",
   storageBucket: "goat-st01.firebasestorage.app",
@@ -10865,18 +10865,18 @@ ${textResponses.join('\n\n')}`;
 
             document.getElementById('app-id-display').textContent = baseAppId; // Display the base app ID
             
-            try {
-                if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
-                    await signInWithCustomToken(auth, __initial_auth_token);
-                    console.log("Signed in with custom token.");
-                } else {
-                    await signInAnonymously(auth);
-                    console.log("Signed in anonymously.");
-                }
-            } catch (error) {
-                console.error("Firebase Authentication failed:", error);
-                document.body.innerHTML = `<div class="text-center p-8 text-red-600"><h1 class="text-2xl font-bold">驗證失敗</h1><p>無法連接至互動服務，請檢查 Firebase 設定或網路連線。</p><p class=\"text-sm mt-2\">${error.message}</p></div>`;
-            }
+            // try {
+            //     if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+            //         await signInWithCustomToken(auth, __initial_auth_token);
+            //         console.log("Signed in with custom token.");
+            //     } else {
+            //         await signInAnonymously(auth);
+            //         console.log("Signed in anonymously.");
+            //     }
+            // } catch (error) {
+            //     console.error("Firebase Authentication failed:", error);
+            //     document.body.innerHTML = `<div class="text-center p-8 text-red-600"><h1 class="text-2xl font-bold">驗證失敗</h1><p>無法連接至互動服務，請檢查 Firebase 設定或網路連線。</p><p class=\"text-sm mt-2\">${error.message}</p></div>`;
+            // }
         }
 
         // Add beforeunload handler to warn user about closing window
